@@ -5,14 +5,10 @@ import {
   apiPlugin,
   getStoryblokApi,
   storyblokInit
-} from "@storyblok/react";
+} from "@storyblok/react/rsc";
 import { storyblokComponents } from "@/components/storyblok/component-map";
 
-const token = process.env.STORYBLOK_TOKEN || process.env.STORYBLOK_ACCESS_TOKEN || "";
-
-if (!token) {
-  console.warn("Missing STORYBLOK_TOKEN");
-}
+const token = process.env.STORYBLOK_ACCESS_TOKEN;
 
 storyblokInit({
   accessToken: token,

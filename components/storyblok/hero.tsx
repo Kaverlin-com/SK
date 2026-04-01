@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { storyblokEditable } from "@storyblok/react";
+import { storyblokEditable } from "@storyblok/react/rsc";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 
-export function Hero({ blok }: { blok: Record<string, any> }) {
+export function Hero({ blok }: { blok: any }) {
   return (
     <Section className="pt-32 md:pt-40" id="home">
       <Container {...storyblokEditable(blok)}>

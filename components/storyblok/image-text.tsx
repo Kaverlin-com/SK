@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { storyblokEditable } from "@storyblok/react";
+import { storyblokEditable } from "@storyblok/react/rsc";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 
-export function ImageText({ blok }: { blok: Record<string, any> }) {
+export function ImageText({ blok }: { blok: any }) {
   return (
     <Section>
       <Container {...storyblokEditable(blok)}>
