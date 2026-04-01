@@ -1,0 +1,65 @@
+{
+  "components": [
+    {
+      "name": "page",
+      "schema": {
+        "body": {
+          "type": "bloks"
+        }
+      }
+    },
+    {
+      "name": "hero",
+      "schema": {
+        "title": { "type": "text" },
+        "subtitle": { "type": "textarea" },
+        "cta_label": { "type": "text" },
+        "cta_link": { "type": "multilink" },
+        "media": { "type": "asset" }
+      }
+    },
+    {
+      "name": "product_grid",
+      "schema": {
+        "products": {
+          "type": "bloks",
+          "component_whitelist": ["product_card"]
+        }
+      }
+    },
+    {
+      "name": "testimonial",
+      "schema": {
+        "items": {
+          "type": "bloks",
+          "component_whitelist": ["quote_item"]
+        }
+      }
+    },
+    {
+      "name": "image_text",
+      "schema": {
+        "title": { "type": "text" },
+        "content": { "type": "textarea" },
+        "image": { "type": "asset" }
+      }
+    },
+    {
+      "name": "ingredient_card",
+      "schema": {
+        "name": { "type": "text" },
+        "benefits": { "type": "textarea" },
+        "usage": { "type": "text" }
+      }
+    },
+    {
+      "name": "cta_banner",
+      "schema": {
+        "title": { "type": "text" },
+        "subtitle": { "type": "textarea" },
+        "cta_label": { "type": "text" },
+        "cta_link": { "type": "multilink" }
+      }
+    }
+  ]
+}
