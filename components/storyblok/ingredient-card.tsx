@@ -1,7 +1,7 @@
-import { storyblokEditable } from "@storyblok/react";
+import { storyblokEditable } from "@storyblok/react/rsc";
 import { Card } from "@/components/ui/card";
 
-export function IngredientCard({ blok }: { blok: Record<string, any> }) {
+export function IngredientCard({ blok }: { blok: any }) {
   return (
     <Card {...storyblokEditable(blok)}>
       <h3 className="font-medium">{blok.name}</h3>

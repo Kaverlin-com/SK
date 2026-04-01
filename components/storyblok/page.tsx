@@ -1,4 +1,4 @@
-import { StoryblokComponent, storyblokEditable } from "@storyblok/react";
+import { StoryblokComponent, storyblokEditable } from "@storyblok/react/rsc";
 
 type PageProps = {
   blok: {
@@ -9,7 +9,7 @@ type PageProps = {
 export function Page({ blok }: PageProps) {
   return (
     <main {...storyblokEditable(blok)} className="space-y-6">
-      {blok.body?.map((nestedBlok: Record<string, any>) => (
+      {blok.body?.map((nestedBlok: any) => (
         <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
       ))}
     </main>

@@ -1,8 +1,6 @@
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 
-export const runtime = "edge";
-
 export default function IngredientDetailPage({ params }: { params: { slug: string } }) {
   const name = params.slug.replace(/-/g, " ");
   return (

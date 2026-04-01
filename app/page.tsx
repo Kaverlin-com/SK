@@ -15,12 +15,17 @@ const fallback = {
   ]
 };
 
+type Blok = {
+  [key: string]: unknown;
+};
+
 export default async function HomePage() {
   const content = (await getStory("home")) || fallback;
 
   return (
     <>
-      <StoryblokComponent blok={content as Record<string, unknown>} />
+      <StoryblokComponent blok={content as Blok} />
+
       <Section>
         <Container>
           <div className="grid gap-6 rounded-soft bg-white p-8 shadow-soft md:grid-cols-3">
@@ -34,7 +39,12 @@ export default async function HomePage() {
             </div>
             <form className="flex items-center gap-2">
               <label htmlFor="email" className="sr-only">Email</label>
-              <input id="email" type="email" placeholder="Email address" className="focus-ring w-full rounded-full border border-charcoal/15 bg-cream px-4 py-3" />
+              <input
+                id="email"
+                type="email"
+                placeholder="Email address"
+                className="focus-ring w-full rounded-full border border-charcoal/15 bg-cream px-4 py-3"
+              />
               <Button>Join</Button>
             </form>
           </div>
