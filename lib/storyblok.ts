@@ -5,7 +5,7 @@ import {
   apiPlugin,
   getStoryblokApi,
   storyblokInit
-} from "@storyblok/react";
+} from "@storyblok/react/rsc";
 import { storyblokComponents } from "@/components/storyblok/component-map";
 
 const token = process.env.STORYBLOK_ACCESS_TOKEN;
