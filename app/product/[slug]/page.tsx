@@ -1,9 +1,13 @@
+export const runtime = 'edge';
+
 import Image from "next/image";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
 
-export default function ProductPage() {
+export default function ProductPage({ params }: { params: { slug: string } }) {
+  const productName = params.slug.replace(/-/g, " ");
+
   return (
     <Section>
       <Container>
@@ -23,7 +27,7 @@ export default function ProductPage() {
 
           <div>
             <p className="text-xs uppercase tracking-wider text-charcoal/60">Barrier support</p>
-            <h1 className="mt-2 text-4xl font-semibold">Barrier Repair Cream</h1>
+            <h1 className="mt-2 text-4xl font-semibold capitalize">{productName}</h1>
             <p className="mt-3 text-charcoal/70">Ceramide-rich moisturizer that locks hydration and reduces redness.</p>
             <p className="mt-5 text-2xl font-medium">$42</p>
             <div className="sticky top-24 mt-6 rounded-soft border border-charcoal/10 bg-white p-4 shadow-soft">
