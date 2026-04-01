@@ -36,4 +36,4 @@ npm run dev
 - Connect real product / review data
 - Add cart state + checkout backend
 - Add Storyblok visual editor bridge hooks per-page story IDs
-- Configure analytics and consent
+- Configure analytics and consent 
