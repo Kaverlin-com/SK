@@ -8,7 +8,7 @@ import {
 } from "@storyblok/react/rsc";
 import { storyblokComponents } from "@/components/storyblok/component-map";
 
-const token = process.env.STORYBLOK_ACCESS_TOKEN;
+const token = process.env.STORYBLOK_TOKEN;
 
 storyblokInit({
   accessToken: token,

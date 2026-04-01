@@ -1,5 +1,3 @@
-export const runtime = 'edge';
-
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 
